@@ -51,7 +51,7 @@ async function init() {
     callback: async (resp) => {
       if (resp.error) return console.error(resp);
       await loadCalendarEvents();
-      setInterval(loadCalendarEvents, 10 * 60 * 1000);
+      setInterval(loadCalendarEvents, 60 * 1000);
     },
   });
 
