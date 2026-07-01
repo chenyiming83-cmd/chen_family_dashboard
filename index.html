@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chen Family Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="dashboard">
+    <header>
+      <div>
+        <h1>🏠 Chen Family</h1>
+        <p id="dateLine">Loading date...</p>
+      </div>
+      <div class="clock" id="clock">--:--</div>
+    </header>
+
+    <section class="grid">
+      <div class="card today">
+        <h2>Today</h2>
+        <div id="todayEvents" class="events">Loading events...</div>
+      </div>
+
+      <div class="card tomorrow">
+        <h2>Tomorrow</h2>
+        <div id="tomorrowEvents" class="events">Loading events...</div>
+      </div>
+    </section>
+
+    <section class="card upcoming">
+      <h2>Upcoming</h2>
+      <div id="upcomingEvents" class="events">Loading events...</div>
+    </section>
+
+    <footer>
+      Auto-refreshes every 10 minutes · Singapore Time
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
