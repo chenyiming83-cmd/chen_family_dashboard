@@ -1,7 +1,10 @@
 * { box-sizing: border-box; }
 
-body {
+html, body {
   margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
   background: #f4f6f8;
   color: #1d1d1f;
@@ -9,96 +12,121 @@ body {
 
 .dashboard {
   width: 100vw;
-  min-height: 100vh;
-  padding: 32px;
+  height: 100vh;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 header {
+  height: 72px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 28px;
+  flex-shrink: 0;
 }
 
 h1 {
-  font-size: 52px;
-  margin: 0 0 8px 0;
+  font-size: 34px;
+  margin: 0;
+  line-height: 1;
 }
 
 #dateLine {
-  font-size: 26px;
-  margin: 0;
+  font-size: 18px;
+  margin: 4px 0 0 0;
   color: #666;
 }
 
 .clock {
-  font-size: 64px;
-  font-weight: 700;
+  font-size: 42px;
+  font-weight: 800;
 }
 
 .grid {
+  flex: 1;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  min-height: 0;
 }
 
 .card {
   background: white;
-  border-radius: 28px;
-  padding: 28px;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+  border-radius: 18px;
+  padding: 12px;
+  box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+  overflow: hidden;
+  min-width: 0;
+}
+
+.day-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
 }
 
 h2 {
-  font-size: 36px;
-  margin: 0 0 20px 0;
+  font-size: 23px;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.day-date {
+  font-size: 15px;
+  color: #777;
+  margin: 6px 0 8px;
+}
+
+.events {
+  overflow: hidden;
+  min-height: 0;
 }
 
 .event {
   display: flex;
-  align-items: flex-start;
-  gap: 18px;
-  padding: 18px 0;
+  gap: 7px;
+  padding: 8px 0;
   border-top: 1px solid #eee;
 }
 
-.event:first-child { border-top: none; }
+.event:first-child {
+  border-top: none;
+}
 
 .emoji {
-  font-size: 38px;
-  width: 50px;
+  font-size: 21px;
+  width: 25px;
+  flex-shrink: 0;
 }
 
 .event-title {
-  font-size: 30px;
+  font-size: 15px;
   font-weight: 700;
+  line-height: 1.15;
+  word-break: break-word;
 }
 
 .event-time {
-  font-size: 24px;
+  font-size: 13px;
   color: #666;
-  margin-top: 4px;
+  margin-top: 3px;
 }
 
 .empty {
-  font-size: 30px;
+  font-size: 15px;
   color: #888;
-  padding: 16px 0;
+  padding-top: 10px;
 }
 
-.upcoming {
-  margin-top: 24px;
-}
-
+.upcoming,
 footer {
-  font-size: 18px;
-  color: #888;
-  text-align: center;
-  margin-top: 24px;
+  display: none;
 }
 
-@media (orientation: portrait) {
-  .grid { grid-template-columns: 1fr; }
-  h1 { font-size: 42px; }
-  .clock { font-size: 48px; }
+.signin {
+  font-size: 22px;
+  padding: 16px 24px;
+  border-radius: 16px;
+  border: none;
 }
