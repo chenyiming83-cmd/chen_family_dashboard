@@ -19,7 +19,7 @@ html, body {
 }
 
 header {
-  height: 58px;
+  height: 66px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -27,19 +27,19 @@ header {
 }
 
 h1 {
-  font-size: 30px;
+  font-size: 38px;
   margin: 0;
   line-height: 1;
 }
 
 #dateLine {
-  font-size: 15px;
-  margin: 3px 0 0;
+  font-size: 20px;
+  margin: 4px 0 0;
   color: #666;
 }
 
 .clock {
-  font-size: 38px;
+  font-size: 44px;
   font-weight: 800;
 }
 
@@ -52,7 +52,7 @@ h1 {
 }
 
 .card {
-  background: rgba(255,255,255,0.88);
+  background: rgba(255,255,255,0.9);
   border-radius: 16px;
   padding: 10px;
   box-shadow: 0 5px 16px rgba(0,0,0,0.08);
@@ -66,15 +66,15 @@ h1 {
 }
 
 h2 {
-  font-size: 21px;
+  font-size: 28px;
   margin: 0;
   line-height: 1.05;
 }
 
 .day-date {
-  font-size: 13px;
+  font-size: 17px;
   color: #777;
-  margin: 4px 0 7px;
+  margin: 5px 0 8px;
 }
 
 .events {
@@ -83,8 +83,8 @@ h2 {
 
 .event {
   display: flex;
-  gap: 6px;
-  padding: 7px 0;
+  gap: 8px;
+  padding: 12px 0;
   border-top: 1px solid #e8e8e8;
 }
 
@@ -93,28 +93,28 @@ h2 {
 }
 
 .emoji {
-  font-size: 19px;
-  width: 23px;
+  font-size: 24px;
+  width: 30px;
   flex-shrink: 0;
 }
 
 .event-title {
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 700;
-  line-height: 1.15;
+  line-height: 1.2;
   word-break: break-word;
 }
 
 .event-time {
-  font-size: 12px;
+  font-size: 16px;
   color: #666;
-  margin-top: 2px;
+  margin-top: 4px;
 }
 
 .empty {
-  font-size: 14px;
+  font-size: 18px;
   color: #888;
-  padding-top: 8px;
+  padding-top: 10px;
 }
 
 .upcoming,
