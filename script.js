@@ -33,6 +33,14 @@ async function init() {
   updateClock();
   setInterval(updateClock, 1000);
 
+   // Refresh Google Calendar every minute
+   setInterval(loadCalendarEvents, 60000);
+
+   // Reload the whole page every 6 hours
+   setInterval(() => {
+     location.reload();
+   }, 21600000);
+
   await loadScript("https://apis.google.com/js/api.js");
   await loadScript("https://accounts.google.com/gsi/client");
 
@@ -201,5 +209,9 @@ async function loadCalendarEvents() {
 
   renderFourDays(response.result.items || []);
 }
+setInterval(() => {
 
+  window.location.reload();
+
+}, 10 * 60 * 1000);
 init();
