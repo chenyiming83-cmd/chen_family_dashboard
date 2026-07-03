@@ -214,4 +214,10 @@ setInterval(() => {
   window.location.reload();
 
 }, 10 * 60 * 1000);
+
+// Full page refresh every 30 minutes
+setInterval(() => {
+  window.location.reload();
+}, 30 * 60 * 1000);
+
 init();
